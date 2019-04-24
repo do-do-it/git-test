@@ -16,3 +16,10 @@ git push -u origin master
 git log 显示提交的版本号
 git reset --hard 目标版本号
 ```
+
+## 根据操作记录回退
+
+```
+git reflog 显示之前的操作记录
+git reset --hard 目标版本号
+```
