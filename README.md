@@ -10,7 +10,7 @@ git add remote origin git@github.com:do-do-it/git-test.git
 git push -u origin master
 ```
 
-### 回退：目标版本之后的 版本不见了
+### 回退：目标版本之后的版本
 
 ```
 git log 显示提交的版本号
