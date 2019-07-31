@@ -6,6 +6,8 @@ const isConflictRegular = '^123$'
 
 let results
 
+console.log('pre-commit')
+
 try {
  // git grep 命令会执行 perl 的正则匹配所有满足冲突条件的文件
     results = execSync(`git grep -n -P "${isConflictRegular}"`, {encoding: 'utf-8'})
