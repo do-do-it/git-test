@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+const execSync = require('child_process').execSync
+const hooks = require('../../package.json').hooks
+const hooksName = 'pre-push'
+
+let results
+
+if (hooks && hooks[hooksName]) {
+  const command = hooks[hooksName]
+  console.log(command)
+  try {
+    results = execSync(command, {
+      encoding: 'utf-8'
+    })
+   } catch (e) {
+       console.log(`${hooksName} failed`)
+       process.exit(1)
+   }
+}
+if (results) {
+  process.exit(1)
+}

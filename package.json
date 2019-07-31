@@ -1,0 +1,23 @@
+{
+  "name": "git-test",
+  "version": "1.0.0",
+  "description": "### 本地关联github仓库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "hooks": {
+    "pre-commit": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/do-do-it/git-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/do-do-it/git-test/issues"
+  },
+  "homepage": "https://github.com/do-do-it/git-test#readme"
+}

@@ -2,11 +2,9 @@
 
 const execSync = require('child_process').execSync
 
-const isConflictRegular = '^123$'
+const isConflictRegular = "^<<<<<<<\\s|^=======$|^>>>>>>>\\s"
 
 let results
-
-console.log('pre-commit')
 
 try {
  // git grep 命令会执行 perl 的正则匹配所有满足冲突条件的文件
