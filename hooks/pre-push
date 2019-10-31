@@ -13,11 +13,14 @@ if (hooks && hooks[hooksName]) {
     results = execSync(command, {
       encoding: 'utf-8'
     })
-   } catch (e) {
-       console.log(`${hooksName} failed`)
-       process.exit(1)
-   }
+  } catch (e) {
+    console.log(`${hooksName} failed`)
+    process.exit(1)
+  }
 }
+console.log(results)
 if (results) {
   process.exit(1)
 }
+
+process.exit(0)

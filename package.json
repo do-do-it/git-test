@@ -4,12 +4,11 @@
   "description": "### 本地关联github仓库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "git": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "hooks": {
     "pre-commit": "npm run test",
-    "pre-push": "npm run git"
+    "pre-push": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/do-do-it/git-test/issues"
   },
-  "homepage": "https://github.com/do-do-it/git-test#readme"
+  "homepage": "https://github.com/do-do-it/git-test#readme",
+  "devDependencies": {
+    "husky": "^3.0.2"
+  }
 }
